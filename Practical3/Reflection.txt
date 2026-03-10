@@ -1,0 +1,3 @@
+what I went well:I successfully cloned the repository,edited the files,and pushed the changes to Github.I now understand the basic Git workflow(add,commit,push)
+Challenges faced:I had trouble with the branch name at first(using 'main' instead of 'master') and some network connection issues when pushing
+Questions:I am still curious about how to handle more complex merge conflicts in the future 

@@ -34,7 +34,7 @@ while infected < total_students:
     
     # Display current day's infection count
     # Note: Python may show decimal values like 7.0 - this is normal at this stage
-    print(f"Day {day}: {infected} students infected")
+    print(f"Day {day}: {int(infected)} students infected")
 
 # After loop ends, display summary
 print(f"\nIt took {day} days to infect all {total_students} students in the IBI1 class.")

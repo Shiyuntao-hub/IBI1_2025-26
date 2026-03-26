@@ -5,20 +5,21 @@
 # 5. Define boolean variables X=True, Y=False, compute W=X or Y
 # 6. Write truth table for W and add comments
 
-a=5.08*(10**6)
- #population of scotland in 2004
-b=5.33*(10**6) 
-#population of scotland in 2014
-c=5.55*(10**6) 
-#population of scotland in 2024
-d=b-a
-#population growth from 2004 to 2014
-e=c-b 
-#population growth from 2014 to 2024
+#population of scotland in 2004(million)
+a=5.08
+#population of scotland in 2014(million)
+b=5.33 
+#population of scotland in 2024(million)
+c=5.55 
+#population change from 2004 to 2014
+d=round(b-a, 2)
+#population change from 2014 to 2024
+e=round(c-b, 2)#Computers represent floating-point numbers in binary,so the result of a calculation may not be exact due to precision limitations. 
+#Rounding to 2 decimal places can help mitigate this issue and provide a more accurate representation of the population change.
 
 #Print the population changes
-print(f"Population change 2004-2014 (d) = {d:.2f} million")
-print(f"Population change 2014-2024 (e) = {e:.2f} million")
+print(f"Population change 2004-2014 (d) = {d} million")
+print(f"Population change 2014-2024 (e) = {e} million")
 #Compare d and e to determine growth trend
 if d>e:
     print("Conclusion: The population is decelerating in scotland.")

@@ -7,14 +7,14 @@ def find_longest_orf(sequence):
     """
     start_codon = "AUG"
     stop_codons = {"UAA", "UAG", "UGA"}
-    longest_orf = ""
+    longest_orf = ""#Initialize longest ORF as an empty string for the following restore
 
    # Search all possible start positions
     for i in range(len(sequence) - 2):
         if sequence[i:i+3] == start_codon:
-            current_orf = ""
+            current_orf = ""  # Initialize current ORF as an empty string for the following restore
             # Read codons in triplets
-            for j in range(i, len(sequence) - 2, 3):
+            for j in range(i, len(sequence) - 2, 3):#set the range to read codons in triplets(start, end, step)
                 codon = sequence[j:j+3]
                 current_orf += codon
                 # Stop when a stop codon is found
@@ -28,11 +28,11 @@ def find_longest_orf(sequence):
 seq = 'AAGAUACAUGCAAGUGGUGUGUCUGUUCUGAGAGGGCCUAAAAG'
 
 # Run the function
-longest_orf, orf_length = find_longest_orf(seq)
+longest_orf, orf_length = find_longest_orf(seq)#explain the function and store the two outputs
 
 # Display results
 print("Original mRNA sequence:", seq)
-print("-" * 60)
+print("-" * 60)#seperate the output for better readability
 print("Longest ORF sequence:", longest_orf)
 print("Length of the longest ORF (nucleotides):", orf_length)
 

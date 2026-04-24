@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # 2. Locate the data file 
-os.chdir('D:/IBI/IBI1_2025-2026/IBI1_2025-26/Practical10')  # Switch to the folder where the data is stored
+os.chdir(os.path.dirname(os.path.abspath(__file__))) # Switch to the folder where the data is stored
 print("Practical10:", os.getcwd())  # Verify if the path is correct
 print("Files in the folder:", os.listdir())  # Confirm the CSV file exists
 
@@ -34,7 +34,7 @@ print(f"\nThe {max_year_afg} reported the maximum DALYs in Afghanistan's first 1
 #dalys_data.iloc[0:10:2,0:5] meaning: select every 2nd row from the first 10 rows (index 0, 2, 4, 6, 8) and the first 5 columns (index 0 to 4)
 
 
-# 5. Show all years for Zimbabwe using Boolean index
+# 5. Show all years for Zimbabwe using Boolean indexing
 zimbabwe = dalys_data.loc[dalys_data['Entity'] == 'Zimbabwe', ['Year', 'DALYs']]
 print("\n=== Zimbabwe DALYs data ===")
 print(zimbabwe)
@@ -67,7 +67,7 @@ plt.show()
 
 # 8. Answer custom question (for question.txt)
 # Question: Distribution of DALYs across all countries in 2019
-data_2019_clean = data_2019.dropna()
+data_2019_clean = recent_data.dropna()
 
 plt.figure(figsize=(8, 5))
 plt.boxplot(data_2019_clean['DALYs'], vert=True)

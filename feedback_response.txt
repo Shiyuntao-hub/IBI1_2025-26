@@ -1,0 +1,8 @@
+Reflective Response:
+
+After reviewing my feedback, I noticed that I lost 1 mark in Week 4 for variables.py. The comparison between d and e was correct, but the result was not clearly stated in a comment as required.
+
+I have edited variables.py and added a clear comment in the if-else statement to explicitly state the conclusion of the comparison. I added a comment that directly records whether the population growth is accelerating or decelerating, which fully meets the marking requirement of storing the result as a comment.
+
+All other scripts and tasks for Week 3, Week 4, and Week 5 were completed correctly and achieved full marks. I have checked all feedback carefully and made the necessary improvement to variables.py.
+

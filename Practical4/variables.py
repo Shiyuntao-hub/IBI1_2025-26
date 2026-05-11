@@ -23,8 +23,10 @@ print(f"Population change 2014-2024 (e) = {e} million")
 #Compare d and e to determine growth trend
 if d>e:
     print("Conclusion: The population is decelerating in scotland.")
+    #comment:Population growth is decelerating(0.25>0.22)
 else:
     print("Conclusion: The population is accelerating in scotland.")
+    #comment:Population growth is accelerating
 
 #Define boolean variables X and Y
 X=True

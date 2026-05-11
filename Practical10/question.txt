@@ -1,0 +1,10 @@
+Question: What is the distribution of DALYs across all countries in 2019?
+ What is the range between the maximum and minimum DALYs values in 2019?
+
+Line number in dalys.py: 68
+
+Result discussion:
+The boxplot shows that the 2019 global DALYs distribution is right‑skewed. Most countries have relatively low DALYs, 
+while a small number of countries have extremely high disease burden. 
+The large range between maximum and minimum DALYs reveals strong global inequality in health burden. 
+This pattern is expected because low‑income countries generally face higher disease burden than high‑income countries due to differences in healthcare, infrastructure, and living conditions.

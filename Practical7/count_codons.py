@@ -139,8 +139,7 @@ def analyze_codon_frequency(input_fasta, target_stop):
 # --------------------------
 if __name__ == "__main__":
     # Update this path to your yeast cDNA FASTA file
-    FASTA_FILE_PATH = "Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa"
-    
+    FASTA_FILE_PATH = "stop_genes.fa" 
     # Get valid stop codon input from user
     while True:
         user_input = input("Enter a stop codon (TAA/TAG/TGA): ").strip().upper()

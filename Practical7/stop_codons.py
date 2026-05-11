@@ -5,22 +5,22 @@ def parse_fasta(fasta_path):
     Parse FASTA file to extract gene names (only the first token in header) and full sequences.
     Returns: dict {gene_name: full_sequence}
     """
-    gene_data = {}
+    gene_data = {}#empty dict to restore the gene name and the full sequence
     current_gene = None
     current_seq = []
 
     with open(fasta_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            line = line.strip()
+        for line in f:#read the file line by line
+            line = line.strip()#Remove extra whitespace and newline
             if not line:
-                continue
+                continue#skip empty lines which is normal in FASTA files
             
             if line.startswith('>'):
                 # Save previous gene data
                 if current_gene and current_seq:
-                    gene_data[current_gene] = ''.join(current_seq)
+                    gene_data[current_gene] = ''.join(current_seq)#combine multi-line sequences into one string
                 
-                # Extract ONLY the gene name (first element after >, no extra info)
+                # Extract ONLY the gene name (first element after >, no extra information)
                 header = line.lstrip('>')
                 current_gene = header.split()[0]  # Strict: only gene name (e.g., YAL001C)
                 current_seq = []

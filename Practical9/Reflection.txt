@@ -1,0 +1,4 @@
+This practical was not easy for me, especially handling stochastic processes and generating random plots.
+I gained a lot by consolidating programming skills learned in class and mastering how to generate random visualizations. 
+The most difficult part was the spatial SIR task, which required balancing infection spread and recovery at the same time. 
+Overall, I understood stochastic SIR models and visualized disease transmission clearly

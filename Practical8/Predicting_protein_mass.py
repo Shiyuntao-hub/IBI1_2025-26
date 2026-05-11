@@ -1,16 +1,3 @@
-
-"""
-FUNCTION calculate_protein_mass(sequence)
-    CREATE a dictionary of amino acid symbols and their masses
-    SET total_mass = 0.0
-    FOR each amino acid in the input sequence
-        IF the amino acid is NOT in the dictionary
-            RAISE an error: invalid amino acid
-        ADD the mass of the amino acid to total_mass
-    RETURN total_mass
-END FUNCTION
-"""
-
 def calculate_protein_mass(sequence):
     # Create a dictionary for amino acid mass values
     aa_mass = {
@@ -33,14 +20,7 @@ def calculate_protein_mass(sequence):
 
     return total_mass
 
-
-"""
-MAIN program for main test
-    Define a test protein sequence
-    Call the function to calculate mass
-    Print the sequence and total mass
-END MAIN program    
-"""
+# Example usage
 if __name__ == "__main__":
     test_sequence = "GASPV"
     result = calculate_protein_mass(test_sequence)

@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # paremeters
-size = 100
-beta = 0.3
-gamma = 0.05
-time_steps = 100
+size = 100 # Grid size (size x size)
+beta = 0.3 # Infection probability
+gamma = 0.05 # Recovery probability
+time_steps = 100 # Number of time steps
 
 # initialize population: 0 for susceptible, 1 for infected, 2 for recovered
 pop = np.zeros((size, size), dtype=int)
@@ -31,7 +31,7 @@ for step in range(time_steps):
     for (i,j) in infected:
         # recovery process
         if np.random.rand() < gamma:
-            pop[i,j] = 2
+            pop[i,j] = 2 
         
         # infection of 8 neighbors
         for di in [-1,0,1]:

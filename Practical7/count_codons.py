@@ -107,26 +107,22 @@ def analyze_codon_frequency(input_fasta, target_stop):
     
     # Step 4: Count codon frequencies
     codon_counts = Counter(all_codons)
-    print(f"\nAnalysis Results for Stop Codon: {target_stop}")
-    print(f"Number of genes with {target_stop}: {genes_with_stop}")
-    print(f"Total codons analyzed: {len(all_codons)}")
-    print("\nTop 10 Most Frequent Codons:")
-    for codon, count in codon_counts.most_common(10):
-        print(f"{codon}: {count} ({count/len(all_codons)*100:.2f}%)")
+    print(f"\nAnalysis for stop codon: {target_stop}")
+    print(f"Genes with {target_stop}: {genes_with_stop}")
+    print(f"Total codons counted: {len(all_codons)}")
+    print("\nAll in-frame codon frequencies:")
+    for codon, count in sorted(codon_counts.items()):
+        print(f"{codon}: {count}")
     
-    # Step 5: Generate and save pie chart (clear labels, readable format)
-    # Limit to top 10 codons + "Other" for readability
-    top_codons = codon_counts.most_common(10)
-    other_count = sum(codon_counts.values()) - sum([count for _, count in top_codons])
-    
-    labels = [codon for codon, _ in top_codons] + ['Other']
-    sizes = [count for _, count in top_codons] + [other_count]
+    # Step 5: Generate and save pie chart (clear labels, readable format)   
+    labels = list(codon_counts.keys())
+    sizes = list(codon_counts.values())
     colors = plt.cm.Set3(range(len(labels)))  # Color palette for readability
     
     # Create plot
-    plt.figure(figsize=(12, 8))
-    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, colors=colors)
-    plt.title(f"Codon Frequency Distribution (Upstream of {target_stop})", fontsize=14)
+    plt.figure(figsize=(14, 10))
+    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90, textprops={'fontsize': 8}, labeldistance=1, pctdistance=0.92)
+    plt.title(f'All In-Frame Codons Upstream of {target_stop}', fontsize=12)
     plt.axis('equal')  # Ensure pie chart is circular
     
     # Save plot to file (PNG format, high resolution)

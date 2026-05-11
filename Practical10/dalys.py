@@ -41,7 +41,7 @@ print(zimbabwe)
 first_year_zim=zimbabwe['Year'].min()
 last_year_zim=zimbabwe['Year'].max()
 print(f"\nThe first year for Zimbabwe DALYs data is {first_year_zim}")
-print(f"The last year for Zimbabwe DALYs data is {last_year_zim}")  # Comment on the first and last year for Zimbabwe DALYs data      
+print(f"The last year for Zimbabwe DALYs data is {last_year_zim}")  # Comment: The first year for Zimbabwe DALYs data is 1990, and the last year is 2019.
 
 
 # 6. Countries with max and min DALYs in 2019

@@ -1,14 +1,3 @@
-"""
-Idaes for FoodItem class:
-CLASS FoodItem
-    CONSTRUCTOR(name, calories, protein, carbs, fat)
-        Store name as an attribute
-        Store calories as an attribute
-        Store protein as an attribute
-        Store carbohydrates as an attribute
-        Store fat as an attribute
-END CLASS
-"""
 class FoodItem:
     def __init__(self, name, calories, protein, carbs, fat):
         self.name = name
@@ -17,23 +6,6 @@ class FoodItem:
         self.carbs = carbs
         self.fat = fat
 
-
-"""
-Ideas for calculate_daily_nutrition:
-FUNCTION calculate_daily_nutrition(food_list)
-    Initialize total_cal, total_pro, total_carbs, total_fat to 0
-    FOR each food item in the list
-        Add its calories to total_cal
-        Add its protein to total_pro
-        Add its carbs to total_carbs
-        Add its fat to total_fat
-    Print all total nutrition values
-    IF total calories > 2500: print warning
-    IF total fat > 90: print warning
-    If no warnings: print normal status
-    Return all four total values
-END FUNCTION
-"""
 def calculate_daily_nutrition(food_list):
     total_cal = 0
     total_pro = 0
@@ -67,16 +39,7 @@ def calculate_daily_nutrition(food_list):
 
     return total_cal, total_pro, total_carbs, total_fat
 
-
-"""
-Ideas for main test:
-MAIN PROGRAM
-    Create multiple FoodItem objects
-    Put them into a daily intake list
-    Call the nutrition calculation function
-    Show results and warnings automatically
-END MAIN PROGRAM
-"""
+# Example usage
 if __name__ == "__main__":
     # Create food instances
     apple = FoodItem("Apple", 60, 0.3, 15, 0.5)
